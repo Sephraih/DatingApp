@@ -1,0 +1,16 @@
+<h4>Internal server error - refresh makes it disappear</h4>
+<ng-container *ngIf="error">
+    <h5 class = 'text-danger'>Error: {{error.message}} </h5>
+    <p class="font-weight-bold">Note: if u are seeing this, prolly not angi's fault</p>
+    <p>What to do next?</p>
+    <ol>
+        <li>open chrome dev</li>
+        <li>inspect network</li>
+        <li>check failing req</li>
+        <li>examine req url - is it correct</li>
+        <li>reproduce error in postman? if same response, issue isnt with angie</li>
+    </ol>
+    <p> Following is the stack trace - this is where u should investigate</p>
+    <code class="mt-5" style="background-color: whitesmoke;">{{error.details}}</code>
+
+</ng-container>
